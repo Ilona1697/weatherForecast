@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+li{
+    list-style-type: none;
+}
+.upperCase{
+    text-transform: uppercase;
+}
+body{
+    background-color: rgb(239, 237, 237);
+}
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 30px;
+}
+.logo {
+    color: turquoise;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+.nav{
+    background: rgb(72, 70, 70);
+    height: 30px;
+    padding: 0 30px;
+}
+.list{
+    display: flex;
+}
+.list li{
+    width: 130px;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+}
+.list li a{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+.list li a.active{
+    background-color: rgb(255, 221, 0);
+    border-right: 1px solid rgba(239, 237, 237, 0.448);
+    border-left: 1px solid rgba(239, 237, 237, 0.448);
+}
+.main{
+    background: lightgray;
+    padding: 15px 30px;
+}
+.currentBlock{
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+.date, .title{
+color: turquoise;
+}
+.title{
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    
+}
+.date{
+    color: turquoise;
+    font-weight: 700;
+    font-size: 15px;
+    margin-left: 10px;
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
+}
+.current__header{
+    display: flex;
+    justify-content: space-between;
+}
+.info{
+    display: flex;
+    align-items: center;
+    color: turquoise;
+    font-weight: 700;
+    font-size: 15px;
+}
+.current__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5px;
+    text-align: center;
+}
+.current__img{
+    width: 30%;
+    color: darkgray;
+}
+.current__img img{
+    width: 80px;
+}
+.current__temp{
+    width: 30%;
+}
+.current__temp .temp{
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.current__temp .realTemp{
+    color: darkgray;
+}
+.current__info{
+    width: 30%;
+    color: darkgray;
+}
+.current__info div{
+    margin-bottom: 10px;
+}
+.hourlyBlock{
+background: #fff;
+padding: 15px 0px;
+margin-bottom: 15px;
+display: flex;
+color: rgb(103, 103, 103);
+text-align: center;
+}
+
+.colHeader{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.colHeader, .slider{
+    padding: 5px 0px;
+}
+.titleRow{
+    padding: 5px 0;
+}
+.titleRow:first-child{
+    flex-grow: 1;
+}
+.slider{
+    width: 75%;
+    
+
+}
+.itc-slider__items{
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    min-width: 540px;
+    max-width: 720px;
+}
+.col{
+    flex: 0 0 16.6%;
+    max-width: 120px;
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.col .row{
+    padding: 5px 10px;
+}
+.slider .icon img{
+    width: 60px;
+}
+
+.otherCitiesBlock{
+    background: #fff;
+    padding: 15px ;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.otherCitiesBlock.hide{
+    display: none;
+}
+.place{
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    border: 2px solid lightgrey;
+}
+.place .img,  .place .city, .place .temp{
+    flex: 0 0 33.3333%;
+    text-align: center;
+}
+.place .img  img{
+    width: 40px;
+}
+.city{
+    color: #000;
+}
+.notFound{
+    text-align: center;
+    background: #fff;
+    color: darkgray;
+    padding: 80px;
+    display: none;
+}
+.notFound img{
+    width: 150px;
+}
+
+
+/*search form */
+.searchBox{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+.searchForm{
+    width: 200px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.searchBtn{
+    width: 20%;
+    display: block;
+    text-align: center;
+    line-height: 1.8;
+    background: transparent;
+    border: none;
+    cursor:pointer;
+}
+input[name="searchCity"]{
+    width: 80%;
+    display: block;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+/* weather for 5 days */
+.days{
+    display: flex;
+    justify-content: space-between;
+}
+.days__item{
+flex: 0 0 16.6%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: center;
+padding: 10px 0;
+cursor: pointer;
+transition: all 0.2s ease;
+background-color: transparent;
+transform: scale(1);
+}
+.days__item.active{
+    background-color: rgb(240, 240, 240);
+    transform: scale(1.1);
+}
+.days__item:hover{
+    background-color: rgb(240, 240, 240);
+    transform: scale(1.1);
+}
+.days__title{
+    color: turquoise;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 7px 0;
+}
+.days__date{
+    font-size: 16px;
+    color:lightgray;
+    padding: 3px 0;
+}
+.days__img img{
+    display: inline-block;
+    width: 80px;
+}
+.days__temp{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 5px 0;
+}
+.days__description{
+    color:rgb(90, 89, 89);
+    font-size: 15px;
+}

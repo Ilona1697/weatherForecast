@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/itc-slider.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/snackbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="snackbar">Some text some message..</div>
+        <div class="loader">
+            <div class="loader_inner"></div>
+        </div>
+        <div class="header">
+            <div class="logo">my weather</div>
+            <div class="searchBox">
+                <form action="" method="" id="searchForm" class="searchForm">
+                    <input type="text" name="searchCity" id="searchCity" placeholder="Rivne, Ukraine">
+                    <button type="submit" class="searchBtn"><i class='bx bx-search-alt-2'></i></button>
+                </form>
+            </div>
+
+        </div>
+        <nav class="nav">
+            <ul class="list">
+                <li><a href="#" id="todayBtn" class="active">Today</a></li>
+                <li><a href="#" id="weekBtn">5-day forecast</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <div class="today">
+                <div class="currentBlock current days" id="currentBlock">
+
+                </div>
+                <div class="hourlyBlock">
+                    <div class="colHeader ">
+                        <div class="titleRow upperCase">Today</div>
+                        <div class="titleRow">Forecast</div>
+                        <div class="titleRow">Temp</div>
+                        <div class="titleRow">Real Feel</div>
+                        <div class="titleRow">Wind (km/h)</div>
+                    </div>
+                    <div class="slider itc-slider" id="slider" data-slider="itc-slider" data-loop="false"
+                        data-autoplay="false">
+                        <div class="itc-slider__wrapper">
+                            <div class="itc-slider__items" id="itc-slider__items"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="otherCitiesBlock" id="otherCitiesBlock"></div>
+            </div>
+            <!-- <div class="notFound">
+                <div class="img"><img src="#" alt="" /></div>
+                <h2><span>Qwerty</span> could not be found.<br> Please enter a different location.</h2>
+
+            </div> -->
+        </main>
+
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <script src="js/itc-slider.js" defer></script> -->
+    <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
+</body>
+
+</html>
